@@ -781,10 +781,7 @@ templates.push(...additionalTemplates);
 
 async function seedDatabase() {
   try {
-    await mongoose.connect(`${MONGO_URL}/${DB_NAME}`, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(`${MONGO_URL}/${DB_NAME}`);
     
     console.log('Connected to MongoDB');
     
